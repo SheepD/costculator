@@ -16,5 +16,7 @@ module Costculator
       g.test_framework :rspec
       g.fixture_replacement :factory_girl
     end
+
+    config.npm.install = ['yarn']
   end
 end
