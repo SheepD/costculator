@@ -1,5 +1,10 @@
 language: ruby
 services:
-  - postgresql
+- postgresql
 before_script:
-  - psql -c 'create database costculator_test;' -U postgres
+- psql -c 'create database costculator_test;' -U postgres
+deploy:
+  provider: heroku
+  app: costculator
+  api_key:
+    secure: GhUfOZrSQrPU27FjwquFWb47pZhDWePa5GW/Ox3XwBHU1V4tb3PyjEy1W+BYYSe/alFaxpOW5e0oiWsHNwz+sFhk+5PU4zdjIfNePwYdW2kGtkN9rgAgX3tqA0mYoBPlT9TFzTyMQxX8ZWzBhXfq8v/a3X+ufI7SFKLnQtng7BfWLzHZC58bJjo2lx4qFl1QaOFFHv+WysrPZ1/1cg/IlMG2GFEm113pWdF/Kn/dkYLCsa0qLTOs9tfDRNkCtsuBjHucobVHF9aQJzddBqzBSUkGz/ZGe5MeOIRkX+wUMP8Yg/6RJD90NFZppszQ6SAqvmKWggwpoSM2TrRkzpMIi70wP3/jzpp1F2z0r3umFPXs6c36dAXxTSmEMycwkw7/fTk1fK+neO9YjLT8T5LglAVsg3YQSAd+3aidN1l5NpmdtZBJYCgOfcejEy/Nqic8d83ilHC1+/Y8E1N9RCoRBB3UNuaxUQJfT7Kj+8Zf8tg+co/WDOQ7+fZ2ZM9G++boCPK8wbS+yDDCFEuDzJzzirJTDNG0JCCEiA/hsNc9YKkj9TpxtrUm2d/ub/F85W5GabvfdJ3vasuw5WCIuoFeU8VtcuwxqvMaPnrAlKIo2UkgeAihfUE2Ob/YsuXgnZoaXCDSGoKdRejOUP8vG4OXPVYneaENsD0IoCL2KYIuVEc=
